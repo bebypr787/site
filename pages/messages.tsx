@@ -1,0 +1,1 @@
+export default function Messages(){return(<div><h1 className='text-3xl font-semibold'>Mensajes</h1><p className='text-white/70'>Tu bandeja de entrada.</p></div>)}

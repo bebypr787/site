@@ -1,0 +1,1 @@
+import {useRouter} from 'next/router';import {useEffect} from 'react';export default function Home(){const r=useRouter();useEffect(()=>{r.replace('/feed')},[r]);return <p className='text-white/70'>Redirigiendo al feed…</p>}

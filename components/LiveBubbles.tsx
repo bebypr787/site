@@ -1,0 +1,1 @@
+export default function LiveBubbles(){return(<div className='card'><div className='flex items-center justify-between mb-3'><h3 className='font-semibold'>Live videos</h3><span className='badge'>En vivo</span></div><div className='flex gap-3'>{Array.from({length:8}).map((_,i)=>(<div key={i} className='w-14 h-14 rounded-full bg-white/10 border-2 border-accent'/>))}</div></div>)}

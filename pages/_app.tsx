@@ -1,0 +1,8 @@
+import '@/styles/globals.css'; import type {AppProps} from 'next/app'; import Link from 'next/link';function HomeIcon(){return(<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' className='w-5 h-5'><path d='M3 11l9-8 9 8' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/><path d='M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/></svg>)}export default function App({Component,pageProps}:AppProps){
+  if (typeof window !== 'undefined') {
+    const lang = process.env.NEXT_PUBLIC_DEFAULT_LANG || 'es';
+    const theme = process.env.NEXT_PUBLIC_THEME || 'dark';
+    document.documentElement.lang = lang;
+    document.documentElement.dataset.theme = theme;
+  }
+  return(<><header className='sticky top-0 z-40 border-b border-white/10 bg-base/70 backdrop-blur'><nav className='mx-auto max-w-6xl px-4 py-3 flex items-center justify-between'><Link href='/' className='text-xl font-semibold'><span className='text-white'>Contenido</span><span className='text-accent'>sX</span></Link><div className='flex items-center gap-4'><Link href='/feed' className='hover:underline flex items-center gap-2'><HomeIcon/><span>Inicio</span></Link><Link href='/explore' className='hover:underline'>Creadores</Link><Link href='/messages' className='hover:underline'>Mensajes</Link></div></nav></header><main className='mx-auto max-w-6xl px-4 py-8'><Component {...pageProps}/></main></>)}

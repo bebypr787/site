@@ -1,0 +1,1 @@
+export default function Explore(){return(<div><h1 className='text-3xl font-semibold'>Creadores</h1><p className='text-white/70'>Explora perfiles.</p></div>)}
